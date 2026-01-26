@@ -756,23 +756,91 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright_part_text">
-				<div class="row">
-					<div class="col-lg-8">
-						<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					</div>
-					<div class="col-lg-4">
-						<div class="copyright_social_icon text-right">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="ti-dribbble"></i></a>
-							<a href="#"><i class="fab fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
+
+			            <style>
+.copyright_part_text {
+    background: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.copyright_part_text .row {
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-text a {
+    color: #e94e1b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #d14010;
+}
+
+.footer-text .ti-heart {
+    color: #e94e1b;
+    margin: 0 2px;
+    font-size: 12px;
+}
+
+.copyright_social_icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.copyright_social_icon a {
+    color: #888;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.copyright_social_icon a:hover {
+    color: #e94e1b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .copyright_part_text .row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .copyright_social_icon {
+        justify-content: center;
+    }
+}
+</style>
+
+<div class="copyright_part_text">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="footer-text m-0">
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by - JayBhawani Farsana and Snacks  <i class="ti-heart" aria-hidden="true"></i> Powered by - <a href="https://semanticdata.online/" target="_blank">Semantic Data</a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <div class="copyright_social_icon">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 		</div>
 	</footer>
 	<!-- footer part end-->
