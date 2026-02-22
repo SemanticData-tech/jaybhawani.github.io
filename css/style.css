@@ -3524,33 +3524,33 @@ ul {
   }
 }
 
-/**************** chefs_part css start ****************/
-/* line 4, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-.chefs_part .single_blog_item h3 {
+/**************** founders_part css start ****************/
+/* line 4, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+.founders_part .single_blog_item h3 {
   margin-bottom: 12px !important;
 }
 
-/* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-.chefs_part .single_blog_item .social_icon {
+/* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+.founders_part .single_blog_item .social_icon {
   margin-top: 35px;
 }
 
 @media (max-width: 576px) {
-  /* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-  .chefs_part .single_blog_item .social_icon {
+  /* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+  .founders_part .single_blog_item .social_icon {
     margin-top: 15px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-  .chefs_part .single_blog_item .social_icon {
+  /* line 8, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+  .founders_part .single_blog_item .social_icon {
     margin-top: 15px;
   }
 }
 
-/* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-.chefs_part .single_blog_item .social_icon a {
+/* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+.founders_part .single_blog_item .social_icon a {
   border: 1px solid #e2e5e7;
   width: 37px;
   height: 37px;
@@ -3563,21 +3563,21 @@ ul {
 }
 
 @media (max-width: 576px) {
-  /* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-  .chefs_part .single_blog_item .social_icon a {
+  /* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+  .founders_part .single_blog_item .social_icon a {
     margin: 0px 5px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-  .chefs_part .single_blog_item .social_icon a {
+  /* line 22, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+  .founders_part .single_blog_item .social_icon a {
     margin: 0px 5px;
   }
 }
 
-/* line 43, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_chefs_part.scss */
-.chefs_part .single_blog_item .social_icon a:hover {
+/* line 43, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_founders_part.scss */
+.founders_part .single_blog_item .social_icon a:hover {
   background-color: #ff6426;
   color: #fff !important;
   border: 1px solid #ff6426;
