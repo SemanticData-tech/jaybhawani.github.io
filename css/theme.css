@@ -1,0 +1,268 @@
+/*
+ * theme.css — Day / Night theme for JayBhawani
+ * Left-side floating toggle button
+ */
+
+/* ── Smooth transitions ── */
+body, .main_menu, footer, section, article, aside,
+.single-footer-widget, .form-control, .dropdown-menu,
+.single_blog_item, .blog_right_sidebar aside {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+/* ══════════════════════════════════════
+   TOGGLE BUTTON — fixed LEFT side
+══════════════════════════════════════ */
+.jb-theme-btn {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
+  width: 44px;
+  height: 80px;
+  background: #ff6426;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 3px 0 14px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  outline: none;
+  transition: background 0.3s, width 0.2s;
+}
+.jb-theme-btn:hover { background: #e04000; width: 48px; }
+.jb-theme-btn .ico { font-size: 18px; line-height: 1; transition: opacity 0.3s; }
+
+/* Light mode: show moon (click to go dark) */
+[data-theme="light"] .jb-theme-btn .ico-sun  { opacity: 0.35; }
+[data-theme="light"] .jb-theme-btn .ico-moon { opacity: 1; }
+/* Dark mode: show sun (click to go light) */
+[data-theme="dark"]  .jb-theme-btn .ico-sun  { opacity: 1; }
+[data-theme="dark"]  .jb-theme-btn .ico-moon { opacity: 0.35; }
+
+@media (max-width: 576px) {
+  .jb-theme-btn { width: 36px; height: 64px; }
+  .jb-theme-btn .ico { font-size: 15px; }
+}
+
+/* ══════════════════════════════════════
+   TRANSPARENT NAVBAR
+   .home_menu = position:absolute (overlays banner naturally)
+   .menu_fixed = added by custom.js on scroll (position:fixed, bg:#fff)
+══════════════════════════════════════ */
+.home_menu,
+.home_menu .navbar,
+.home_menu .navbar-light {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.menu_fixed {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* ══════════════════════════════════════
+   DARK THEME
+══════════════════════════════════════ */
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #e8ddd0;
+}
+
+/* Navbar */
+[data-theme="dark"] .home_menu,
+[data-theme="dark"] .home_menu .navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+[data-theme="dark"] .menu_fixed {
+  background-color: rgba(22,22,22,0.97) !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.4) !important;
+}
+[data-theme="dark"] .main_menu .main-menu-item ul li a,
+[data-theme="dark"] .menu_fixed .main-menu-item ul li a {
+  color: #e0d0c0 !important;
+}
+[data-theme="dark"] .dropdown-menu {
+  background-color: #2a2a2a !important;
+  border-color: #3a3a3a !important;
+}
+[data-theme="dark"] .dropdown-item { color: #e0d0c0 !important; }
+[data-theme="dark"] .dropdown-item:hover { background: #333 !important; color: #ff6426 !important; }
+[data-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
+
+/* Sections */
+[data-theme="dark"] .gray_bg { background-color: #1e1e1e !important; }
+[data-theme="dark"] .section_tittle h2,
+[data-theme="dark"] .section_tittle p,
+[data-theme="dark"] .section_tittle h4 { color: #e8ddd0 !important; }
+
+/* Cards */
+[data-theme="dark"] .single_blog_item {
+  background: #2a2a2a !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
+}
+[data-theme="dark"] .single_blog_item .single_blog_text h3 a,
+[data-theme="dark"] .single_blog_item .single_blog_text p { color: #e0d0c0 !important; }
+
+/* Food menu */
+[data-theme="dark"] .food_menu_nav .nav-link { color: #a09080 !important; }
+[data-theme="dark"] .food_menu_nav .nav-link.active { color: #ff6426 !important; }
+[data-theme="dark"] .single_food_item h3,
+[data-theme="dark"] .single_food_item p,
+[data-theme="dark"] .single_food_item h5 { color: #e0d0c0 !important; }
+
+/* About */
+[data-theme="dark"] .about_text h5,
+[data-theme="dark"] .about_text h2,
+[data-theme="dark"] .about_text p,
+[data-theme="dark"] .about_text a { color: #e0d0c0 !important; }
+
+/* Forms */
+[data-theme="dark"] .form-control {
+  background-color: #2a2a2a !important;
+  border-color: #3a3a3a !important;
+  color: #e0d0c0 !important;
+}
+[data-theme="dark"] .form-control::placeholder { color: #7a6a5a !important; }
+[data-theme="dark"] .form-control:focus {
+  background-color: #333 !important;
+  border-color: #ff6426 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255,100,38,0.2) !important;
+}
+[data-theme="dark"] select.form-control option { background: #2a2a2a; }
+
+/* Founders / team cards */
+[data-theme="dark"] .single_founders_item h4,
+[data-theme="dark"] .single_founders_item p { color: #e0d0c0 !important; }
+
+/* Blog */
+[data-theme="dark"] .blog_details h2 a,
+[data-theme="dark"] .blog_details p { color: #e0d0c0 !important; }
+[data-theme="dark"] .blog_right_sidebar aside.single_sidebar_widget {
+  background: #2a2a2a !important;
+  border-color: #3a3a3a !important;
+}
+[data-theme="dark"] .blog_right_sidebar .widget_title,
+[data-theme="dark"] .blog_right_sidebar .cat-list li a p,
+[data-theme="dark"] .blog_right_sidebar .post_item .media-body h3,
+[data-theme="dark"] .blog_right_sidebar .post_item .media-body p { color: #e0d0c0 !important; }
+[data-theme="dark"] .blog_right_sidebar .tag_cloud_widget ul li a {
+  background: #3a3a3a !important;
+  border-color: #4a4a4a !important;
+  color: #e0d0c0 !important;
+}
+[data-theme="dark"] .blog_right_sidebar .tag_cloud_widget ul li a:hover {
+  background: #ff6426 !important;
+  color: #fff !important;
+}
+[data-theme="dark"] .pagination .page-link {
+  background-color: #2a2a2a !important;
+  border-color: #3a3a3a !important;
+  color: #e0d0c0 !important;
+}
+[data-theme="dark"] .pagination .page-item.active .page-link {
+  background-color: #ff6426 !important;
+  border-color: #ff6426 !important;
+}
+[data-theme="dark"] .quote-wrapper .quotes {
+  background: #2a2a2a !important;
+  border-left: 4px solid #ff6426 !important;
+  color: #e0d0c0 !important;
+}
+[data-theme="dark"] .single-comment .desc .comment,
+[data-theme="dark"] .single-comment h5 a,
+[data-theme="dark"] .single-comment .date,
+[data-theme="dark"] .comments-area h4,
+[data-theme="dark"] .comment-form h4,
+[data-theme="dark"] .blog-author .media-body h4,
+[data-theme="dark"] .blog-author .media-body p,
+[data-theme="dark"] .blog_details .excert,
+[data-theme="dark"] .single-post .blog_details h2 { color: #e0d0c0 !important; }
+[data-theme="dark"] .blog-author { background: #2a2a2a !important; border-color: #3a3a3a !important; }
+[data-theme="dark"] .navigation-area .nav-left,
+[data-theme="dark"] .navigation-area .nav-right { background: #2a2a2a !important; }
+[data-theme="dark"] .navigation-area h4 { color: #e0d0c0 !important; }
+
+/* Contact */
+[data-theme="dark"] .contact-title,
+[data-theme="dark"] .contact-info h3,
+[data-theme="dark"] .contact-info p { color: #e0d0c0 !important; }
+
+/* Footer */
+[data-theme="dark"] .footer-area { background-color: #111 !important; }
+[data-theme="dark"] .single-footer-widget h4,
+[data-theme="dark"] .single-footer-widget p,
+[data-theme="dark"] .single-footer-widget strong { color: #c0b0a0 !important; }
+[data-theme="dark"] .contact_info ul li a,
+[data-theme="dark"] .contact_info p { color: #b0a090 !important; }
+[data-theme="dark"] .contact_info span { color: #ff6426 !important; }
+[data-theme="dark"] .copyright_part_text {
+  background-color: #0d0d0d !important;
+  border-top-color: #222 !important;
+}
+[data-theme="dark"] .footer-text,
+[data-theme="dark"] .copyright_social_icon a { color: #888 !important; }
+
+/* Breadcrumb */
+[data-theme="dark"] .breadcrumb_bg { filter: brightness(0.5) saturate(0.8); }
+
+/* ══════════════════════════════════════
+   DARK MODE — TEXT COLOR FIXES
+══════════════════════════════════════ */
+
+/* Banner / hero text */
+[data-theme="dark"] .banner_part .banner_text h1,
+[data-theme="dark"] .banner_part .banner_text p,
+[data-theme="dark"] .banner_part .banner_text .btn_2,
+[data-theme="dark"] .banner_part .video_popup { color: #f0e8df !important; }
+
+/* General headings + body text */
+[data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4,
+[data-theme="dark"] h5, [data-theme="dark"] h6 { color: #f0e8df !important; }
+[data-theme="dark"] p { color: #c8bdb0 !important; }
+[data-theme="dark"] a { color: #e0d0c0; }
+
+/* Nav links stay readable */
+[data-theme="dark"] .main_menu .main-menu-item ul li a,
+[data-theme="dark"] .menu_fixed .main-menu-item ul li a { color: #f0e8df !important; }
+
+/* Reservation / Order form labels */
+[data-theme="dark"] .regervation_part .section_tittle h2,
+[data-theme="dark"] .regervation_part .section_tittle p { color: #fff !important; }
+
+/* About section */
+[data-theme="dark"] .about_part h5,
+[data-theme="dark"] .about_part h2,
+[data-theme="dark"] .about_part p,
+[data-theme="dark"] .about_part li { color: #e0d0c0 !important; }
+
+/* Exclusive items / popular dishes */
+[data-theme="dark"] .exclusive_item_part .section_tittle h2,
+[data-theme="dark"] .exclusive_item_part .section_tittle p,
+[data-theme="dark"] .single_blog_text h3 a,
+[data-theme="dark"] .single_blog_text p { color: #f0e8df !important; }
+
+/* Review section */
+[data-theme="dark"] .review_part h2,
+[data-theme="dark"] .review_part p,
+[data-theme="dark"] .client_review_text p,
+[data-theme="dark"] .client_review_text h4 { color: #e0d0c0 !important; }
+
+/* Intro video section */
+[data-theme="dark"] .intro_video_iner h2 { color: #fff !important; }
+
+/* Btn_2 (Reservation button border) */
+[data-theme="dark"] .banner_part .banner_text .btn_2 {
+  border-left-color: #e0d0c0 !important;
+  color: #f0e8df !important;
+}
+[data-theme="dark"] .banner_part .banner_text .banner_btn_iner::before,
+[data-theme="dark"] .banner_part .banner_text .banner_btn_iner::after {
+  background-color: #e0d0c0 !important;
+}
