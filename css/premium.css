@@ -1,0 +1,774 @@
+/* ============================================================
+   JAY BHAWANI FARSANA — PREMIUM UPGRADE CSS
+   Inspired by stadias.in & firechars.in quality level
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --jb-saffron:      #E8742B;
+  --jb-gold:         #F4A520;
+  --jb-deep:         #1A0D05;
+  --jb-brown:        #3D1F0D;
+  --jb-cream:        #FDF6EC;
+  --jb-warm-white:   #FFF9F3;
+  --jb-border:       rgba(232, 116, 43, 0.15);
+  --jb-shadow:       0 8px 40px rgba(26,13,5,0.10);
+  --jb-shadow-lg:    0 20px 60px rgba(26,13,5,0.16);
+  --ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:     cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Page Body Baseline ── */
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--jb-deep);
+  background: var(--jb-warm-white);
+}
+
+/* ── Animated Breadcrumb Hero ── */
+.breadcrumb.breadcrumb_bg {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.breadcrumb.breadcrumb_bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26,13,5,0.72) 0%, rgba(232,116,43,0.55) 100%);
+  z-index: 1;
+}
+.breadcrumb.breadcrumb_bg::after {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,165,32,0.25) 0%, transparent 70%);
+  top: -200px; right: -100px;
+  z-index: 1;
+  animation: pulseOrb 6s ease-in-out infinite alternate;
+}
+@keyframes pulseOrb {
+  from { transform: scale(1) translateY(0); opacity: 0.7; }
+  to   { transform: scale(1.2) translateY(-30px); opacity: 1; }
+}
+.breadcrumb_iner {
+  position: relative;
+  z-index: 2;
+}
+.breadcrumb_iner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  animation: heroTextIn 0.9s var(--ease-out-expo) both;
+}
+.breadcrumb_iner_item::after {
+  content: '— Kolhapuri Since 1985 —';
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  animation: heroTextIn 1.1s 0.2s var(--ease-out-expo) both;
+}
+@keyframes heroTextIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Section Background ── */
+.food_menu.gray_bg {
+  background: var(--jb-cream) !important;
+  padding: 90px 0 100px !important;
+  position: relative;
+  overflow: hidden;
+}
+.food_menu.gray_bg::before {
+  content: 'JAY BHAWANI';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 900;
+  color: rgba(232,116,43,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: 0.08em;
+}
+
+/* ── Section Title ── */
+.section_tittle p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--jb-saffron);
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 12px;
+}
+.section_tittle p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 2px;
+  background: var(--jb-saffron);
+}
+.section_tittle h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 900 !important;
+  color: var(--jb-deep) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ── Premium Tab Nav ── */
+.food_menu_nav {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px !important;
+  border: none !important;
+  background: none !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+.food_menu_nav a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--jb-brown) !important;
+  padding: 9px 22px !important;
+  border-radius: 50px !important;
+  border: 1.5px solid transparent !important;
+  background: rgba(255,255,255,0.7) !important;
+  transition: all 0.35s var(--ease-out-expo) !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.food_menu_nav a img { display: none !important; }
+.food_menu_nav a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--jb-saffron);
+  border-radius: 50px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-out-expo);
+  z-index: -1;
+}
+.food_menu_nav a:hover,
+.food_menu_nav a.active {
+  color: #fff !important;
+  border-color: var(--jb-saffron) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(232,116,43,0.35) !important;
+}
+.food_menu_nav a:hover::before,
+.food_menu_nav a.active::before {
+  transform: scaleX(1);
+}
+
+/* ── Tab Content Transition ── */
+.tab-content {
+  position: relative;
+  z-index: 1;
+}
+.tab-pane {
+  animation: tabFadeIn 0.5s var(--ease-out-expo) both;
+}
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Premium Food Cards ── */
+.jb-food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 40px;
+}
+@media (max-width: 1199px) { .jb-food-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px)  { .jb-food-grid { grid-template-columns: 1fr; } }
+
+.jb-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(26,13,5,0.06);
+  border: 1px solid rgba(232,116,43,0.08);
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+.jb-card.is-visible {
+  animation: cardReveal 0.65s var(--ease-out-expo) both;
+}
+@keyframes cardReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+.jb-card:nth-child(1) { animation-delay: 0.05s; }
+.jb-card:nth-child(2) { animation-delay: 0.12s; }
+.jb-card:nth-child(3) { animation-delay: 0.19s; }
+.jb-card:nth-child(4) { animation-delay: 0.26s; }
+.jb-card:nth-child(5) { animation-delay: 0.33s; }
+.jb-card:nth-child(6) { animation-delay: 0.40s; }
+
+.jb-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--jb-shadow-lg);
+}
+
+/* Card image wrapper */
+.jb-card-img {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(145deg, #FFF4E6 0%, #FDECD2 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jb-card-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(255,249,243,0.5), transparent);
+  pointer-events: none;
+}
+.jb-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+.jb-card:hover .jb-card-img img {
+  transform: scale(1.07);
+}
+
+/* Category badge */
+.jb-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jb-saffron);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(232,116,43,0.2);
+  z-index: 2;
+}
+
+/* Card body */
+.jb-card-body {
+  padding: 20px 22px 22px;
+}
+.jb-card-body h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: var(--jb-deep) !important;
+  margin-bottom: 7px !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+}
+.jb-card-body p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.84rem;
+  color: #7a6355;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.jb-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(232,116,43,0.10);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+.jb-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jb-saffron);
+}
+.jb-price span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #b08060;
+  display: block;
+  line-height: 1;
+}
+.jb-order-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--jb-saffron);
+  text-decoration: none;
+  padding: 7px 18px;
+  border: 1.5px solid var(--jb-saffron);
+  border-radius: 50px;
+  transition: all 0.3s var(--ease-out-expo);
+  white-space: nowrap;
+}
+.jb-order-btn:hover {
+  background: var(--jb-saffron);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(232,116,43,0.35);
+}
+
+/* ── Section Divider Stripe ── */
+.jb-stripe {
+  width: 100%;
+  padding: 18px 0;
+  background: var(--jb-deep);
+  overflow: hidden;
+  position: relative;
+}
+.jb-stripe-inner {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: marqueeScroll 22s linear infinite;
+}
+.jb-stripe-inner span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  padding: 0 32px;
+}
+.jb-stripe-inner span.dot {
+  color: var(--jb-saffron);
+  padding: 0;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Stats Row ── */
+.jb-stats {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 48px 0;
+  background: #fff;
+  border-top: 1px solid rgba(232,116,43,0.10);
+  border-bottom: 1px solid rgba(232,116,43,0.10);
+}
+.jb-stat-item {
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+  padding: 24px 20px;
+  border-right: 1px solid rgba(232,116,43,0.12);
+}
+.jb-stat-item:last-child { border-right: none; }
+.jb-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--jb-saffron);
+  line-height: 1;
+  display: block;
+}
+.jb-stat-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #9a7a6a;
+  margin-top: 6px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* ── Intro Video Enhancement ── */
+.intro_video_bg {
+  position: relative;
+  overflow: hidden;
+}
+.intro_video_bg h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2.4rem, 5vw, 4.5rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+}
+
+/* ── Footer Enhancement ── */
+footer.footer-area {
+  background: var(--jb-deep) !important;
+  padding-top: 60px !important;
+}
+/* All footer text must be light — override dark base styles */
+footer.footer-area .single-footer-widget h4 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 18px !important;
+}
+footer.footer-area .single-footer-widget p,
+footer.footer-area .single-footer-widget p strong,
+footer.footer-area .contact_info p,
+footer.footer-area .contact_info p span,
+footer.footer-area .contact_info ul li,
+footer.footer-area .contact_info ul li a,
+footer.footer-area p {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(255,255,255,0.62) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.75 !important;
+}
+/* Span labels like "Phone:", "Email:" — slightly brighter */
+footer.footer-area .contact_info p span {
+  color: rgba(255,255,255,0.45) !important;
+  font-weight: 500 !important;
+}
+/* Link hover */
+footer.footer-area .contact_info ul li a:hover {
+  color: var(--jb-saffron) !important;
+}
+/* Social icons */
+footer.footer-area .footer_social_icon a {
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 1rem;
+  margin-right: 14px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+footer.footer-area .footer_social_icon a:hover {
+  color: var(--jb-saffron) !important;
+  transform: translateY(-2px);
+}
+/* Strong tags in footer */
+footer.footer-area strong {
+  color: rgba(255,255,255,0.85) !important;
+}
+/* Footer divider line */
+footer.footer-area .row {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 40px;
+  margin-bottom: 0;
+}
+
+/* ── Nav Enhancement ── */
+.main_menu .navbar-brand img { height: 44px; }
+.main_menu .nav-link {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+}
+.single_page_btn {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+/* ── Scroll Reveal Base ── */
+.jb-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+.jb-reveal.jb-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.jb-reveal-delay-1 { transition-delay: 0.1s; }
+.jb-reveal-delay-2 { transition-delay: 0.2s; }
+.jb-reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ── Horizontal Rule Decorator ── */
+.jb-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 48px 0 0;
+}
+.jb-divider::before,
+.jb-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(232,116,43,0.25));
+}
+.jb-divider::after {
+  background: linear-gradient(to left, transparent, rgba(232,116,43,0.25));
+}
+.jb-divider-icon {
+  font-size: 1.2rem;
+  color: var(--jb-saffron);
+}
+
+/* ── Keep old single_food_item hidden on menu page (replaced by jb-food-grid) ── */
+.food_menu .single_food_item.legacy {
+  display: none !important;
+}
+
+/* ── Global Page Enhancements (all pages) ── */
+
+/* Section padding consistency */
+.section_padding { padding: 80px 0 !important; }
+
+/* Section titles on all pages */
+.section_tittle > p {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase !important;
+  color: var(--jb-saffron) !important;
+  padding-left: 38px !important;
+  position: relative !important;
+  margin-bottom: 10px !important;
+}
+.section_tittle > p::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 26px !important;
+  height: 2px !important;
+  background: var(--jb-saffron) !important;
+}
+.section_tittle h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  font-weight: 900 !important;
+  color: var(--jb-deep) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* CTA Buttons */
+.single_page_btn, .btn_1, .btn_2, .btn_3 {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  border-radius: 50px !important;
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1) !important;
+}
+.single_page_btn:hover, .btn_1:hover, .btn_2:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(232,116,43,0.35) !important;
+}
+
+/* About / company section text */
+.about_text p, .company_text p, .service_item p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.8 !important;
+  color: #5a4535 !important;
+}
+
+/* Blog cards */
+.blog_item, .single_blog_item {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s !important;
+  box-shadow: 0 4px 20px rgba(26,13,5,0.07) !important;
+}
+.blog_item:hover, .single_blog_item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 48px rgba(26,13,5,0.13) !important;
+}
+.blog_item_text h3, .single_blog_item h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+}
+
+/* Founders / Team cards */
+.single_founder_item, .single_chefs_item, .founders_part .single-member {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s !important;
+}
+.single_founder_item:hover, .single_chefs_item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 48px rgba(26,13,5,0.14) !important;
+}
+.founder_name h3, .chefs_name h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+}
+
+/* Contact form */
+.form-control, input[type="text"], input[type="email"], textarea {
+  border-radius: 10px !important;
+  border: 1.5px solid rgba(232,116,43,0.18) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.form-control:focus, input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: var(--jb-saffron) !important;
+  box-shadow: 0 0 0 3px rgba(232,116,43,0.12) !important;
+  outline: none !important;
+}
+
+/* Company/About page hero text */
+.company_banner h1, .about_banner h1, .banner_text h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Gray background sections */
+.gray_bg { background: var(--jb-cream) !important; }
+
+/* White background sections */
+.white_bg { background: var(--jb-warm-white); }
+
+/* ── Reservation / Order Now — preserve dark image background ── */
+.regervation_part,
+section.regervation_part,
+section.regervation_part.section_padding {
+  background-image: url("../img/booking_tabel_bg.png") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-color: transparent !important;
+}
+.regervation_part .section_tittle p,
+.regervation_part .section_tittle h2 {
+  color: #fff !important;
+}
+.regervation_part .form-control,
+.regervation_part input {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(255,255,255,0.35) !important;
+  color: rgba(255,255,255,0.75) !important;
+  box-shadow: none !important;
+}
+.regervation_part .form-control:focus,
+.regervation_part input:focus {
+  border-bottom-color: var(--jb-saffron) !important;
+  box-shadow: none !important;
+}
+
+/* ── Founders & Team Cards — fix text visibility on white background ── */
+/* h3 names: force dark visible text */
+.founders_part .single_blog_item .single_blog_text h3,
+.founders_part .single_blog_item h3,
+.chefs_part .single_blog_item h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: #1A0D05 !important;
+  margin-bottom: 5px !important;
+}
+/* p role text: visible warm brown */
+.founders_part .single_blog_item .single_blog_text p,
+.founders_part .single_blog_item p,
+.chefs_part .single_blog_item p {
+  font-family: 'DM Sans', sans-serif !important;
+  color: #7a5f4a !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+/* Card text area — ensure white bg */
+.founders_part .single_blog_item .single_blog_text,
+.chefs_part .single_blog_item .single_blog_text {
+  background: #fff !important;
+  padding: 20px 22px 18px !important;
+}
+/* Full card styling */
+.founders_part .single_blog_item,
+.chefs_part .single_blog_item {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 24px rgba(26,13,5,0.08) !important;
+  border: 1px solid rgba(232,116,43,0.09) !important;
+  background: #fff !important;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s !important;
+}
+.founders_part .single_blog_item:hover,
+.chefs_part .single_blog_item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 64px rgba(26,13,5,0.16) !important;
+}
+/* Image zoom on hover */
+.founders_part .single_blog_item .single_blog_img,
+.chefs_part .single_blog_item .single_blog_img {
+  overflow: hidden !important;
+}
+.founders_part .single_blog_item .single_blog_img img,
+.chefs_part .single_blog_item .single_blog_img img {
+  transition: transform 0.55s cubic-bezier(0.16,1,0.3,1) !important;
+  width: 100% !important;
+  display: block !important;
+}
+.founders_part .single_blog_item:hover .single_blog_img img,
+.chefs_part .single_blog_item:hover .single_blog_img img {
+  transform: scale(1.06) !important;
+}
+/* Social icon buttons */
+.founders_part .single_blog_item .social_icon a {
+  border: 1.5px solid rgba(232,116,43,0.25) !important;
+  color: var(--jb-saffron) !important;
+  transition: all 0.3s !important;
+}
+.founders_part .single_blog_item .social_icon a:hover {
+  background: var(--jb-saffron) !important;
+  border-color: var(--jb-saffron) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+/* Section bg */
+.founders_part {
+  background: var(--jb-warm-white) !important;
+}
