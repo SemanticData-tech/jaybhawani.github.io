@@ -772,3 +772,50 @@ section.regervation_part.section_padding {
 .founders_part {
   background: var(--jb-warm-white) !important;
 }
+
+/* ── Banner: hide CSS ::after (spoon in middle) — show our positioned version instead ── */
+/* The original ::after places the spoon at "right: 19%" — push it to far left instead */
+.banner_part::after {
+  right: auto !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  background-position: bottom left !important;
+  background-size: 340px auto !important;
+  z-index: 0 !important;
+  opacity: 0.85;
+}
+
+/* ── Banner: 100% Veg badge image — left side, below buttons ── */
+.jb-veg-badge-img {
+  display: inline-block;
+  position: relative;
+  margin-top: 28px;
+}
+.jb-veg-badge-img img {
+  width: 170px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(26,13,5,0.12);
+  background: #fff;
+  display: block;
+}
+.jb-veg-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--jb-saffron);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 13px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(232,116,43,0.45);
+  white-space: nowrap;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .banner_part::after { display: none !important; }
+  .jb-veg-badge-img { display: none; }
+}
