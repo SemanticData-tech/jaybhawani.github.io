@@ -266,3 +266,84 @@ body, .main_menu, footer, section, article, aside,
 [data-theme="dark"] .banner_part .banner_text .banner_btn_iner::after {
   background-color: #e0d0c0 !important;
 }
+
+/* ══════════════════════════════════════
+   FIX — Mobile dark mode banner background
+   style.css sets .banner_part to #f0eed4 (cream) on mobile (<768px)
+   In dark mode that cream bg makes light text invisible.
+   Solution: override to dark on mobile in dark mode only.
+══════════════════════════════════════ */
+@media (max-width: 991px) {
+  [data-theme="dark"] .banner_part {
+    background-color: #1a0a02 !important;
+    background-image: none !important;
+  }
+  [data-theme="dark"] .banner_part .banner_text h5,
+  [data-theme="dark"] .banner_part .banner_text h1,
+  [data-theme="dark"] .banner_part .banner_text p {
+    color: #f0e8df !important;
+  }
+}
+
+/* ══════════════════════════════════════
+   FIX — Nav link visibility
+   Desktop: banner has bg image (dark food photo) — white links OK
+   Mobile light mode: banner is cream — nav links need to be dark/readable
+   Mobile dark mode: nav toggler area is dark — links already white from above
+══════════════════════════════════════ */
+
+/* Desktop light mode — links on food bg image, keep white */
+@media (min-width: 992px) {
+  [data-theme="light"] .home_menu .navbar-nav .nav-link {
+    color: #1a0a02 !important;
+  }
+  [data-theme="light"] .home_menu .menu_btn .btn_1 {
+    color: #1a0a02 !important;
+    border-color: rgba(26,10,2,0.6) !important;
+  }
+  [data-theme="dark"] .home_menu .navbar-nav .nav-link {
+    color: #f0e8df !important;
+  }
+}
+
+/* Mobile nav links — always dark text in collapsed menu on light mode */
+@media (max-width: 991px) {
+  [data-theme="light"] .navbar-collapse .nav-link {
+    color: #1a0a02 !important;
+  }
+  [data-theme="light"] .navbar-toggler-icon {
+    filter: none !important;
+  }
+}
+
+/* ══════════════════════════════════════
+   FIX — Mobile hamburger menu dark mode
+   style.css hardcodes background-color:#fff on .navbar-collapse
+   Override it to dark when dark mode is active
+══════════════════════════════════════ */
+@media (max-width: 991px) {
+  [data-theme="dark"] .navbar-collapse {
+    background-color: #1a0a02 !important;
+    border-bottom: 2px solid rgba(232, 116, 43, 0.3) !important;
+  }
+  [data-theme="dark"] .navbar-collapse .nav-link,
+  [data-theme="dark"] .navbar-collapse .nav-item a {
+    color: #f0e8df !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  }
+  [data-theme="dark"] .navbar-collapse .nav-link:hover,
+  [data-theme="dark"] .navbar-collapse .nav-item a:hover {
+    color: #E8742B !important;
+  }
+  [data-theme="dark"] .navbar-collapse .dropdown-menu {
+    background-color: #2a1008 !important;
+    border-color: rgba(232,116,43,0.2) !important;
+  }
+  [data-theme="dark"] .navbar-collapse .dropdown-item {
+    color: #e0d0c0 !important;
+  }
+  [data-theme="dark"] .navbar-collapse .dropdown-item:hover {
+    background: #3a1810 !important;
+    color: #E8742B !important;
+  }
+}
