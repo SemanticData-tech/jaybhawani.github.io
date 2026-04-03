@@ -347,3 +347,16 @@ body, .main_menu, footer, section, article, aside,
     color: #E8742B !important;
   }
 }
+
+/* ══════════════════════════════════════
+   FIX — Exclusive Items cards: dark mode text should be dark (cards are white bg)
+══════════════════════════════════════ */
+[data-theme="dark"] .single_blog_item {
+  background: #fff !important;
+}
+[data-theme="dark"] .single_blog_item .single_blog_text h3,
+[data-theme="dark"] .single_blog_item .single_blog_text h3 a,
+[data-theme="dark"] .single_blog_item .single_blog_text p,
+[data-theme="dark"] .single_blog_item .single_blog_text .btn_3 {
+  color: #1a0d05 !important;
+}
