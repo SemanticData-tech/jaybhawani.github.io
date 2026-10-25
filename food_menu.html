@@ -24,51 +24,86 @@
 </head>
 <body>
 
-    <!-- Header -->
+<!--::header part start::-->
     <header class="main_menu">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Jay Bhawani"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse main-menu-item justify-content-end" id="navbarSupportedContent">
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="company.html">Company</a></li>
-                                <li class="nav-item"><a class="nav-link" href="food_menu.html">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link" href="founders.html">Founders</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="company.html">Company</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="food_menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="founders.html">Founders</a>
+                                </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown">Blog</a>
-                                    <div class="dropdown-menu">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="blog.html">Blog</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single Blog</a>
+                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
                                     </div>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
                             </ul>
+
+                            <!-- MOBILE BUTTONS: Visible ONLY inside the open Hamburger Menu (Hidden on Desktop) -->
+                            <div class="d-lg-none d-flex flex-column align-items-center mt-3 pb-3 w-100">
+                                <a href="https://wa.me/919420002526?text=Hi%20jay%20bhawani%20team%20%2C%20I%20want%20to%20became%20a%20distribution%20patner%2C%20please%20let%20me%20know%20required%20formality." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn_distributor mb-2 w-75 text-center">
+                                   Become Distributor
+                                </a>
+                                <a href="https://wa.me/919420002526?text=Hi%20Jaybhawani%20Team.%20Need%20to%20discuss%20about%20farsana" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="single_page_btn w-75 text-center">
+                                   Order Now
+                                </a>
+                            </div>
                         </div>
-						
-						<a href="https://wa.me/919420002526?text=Hi%20jay%20bhawani%20team%20%2C%20I%20want%20to%20became%20a%20distribution%20patner%2C%20please%20let%20me%20know%20required%20formality." 
-						   target="_blank" 
-						   rel="noopener noreferrer" 
-						   class="btn_distributor mr-2"
-						   onmouseover="this.style.backgroundColor='#ff6426'; this.style.color='#ffffff';"
-						   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff6426';"
-						   style="color: #ff6426 !important; border: 2px solid #ff6426 !important; background-color: transparent !important; display: inline-block; padding: 8.5px 20px; border-radius: 50px; font-weight: 600; text-decoration: none !important;">
-						   Become Distributor
-						</a>
-						
-                        <div class="menu_btn">
-                            <a href="https://wa.me/919420002526?text=Hi%20Jaybhawani%20Team.%20Need%20to%20discuss%20about%20farsana" target="_blank" class="single_page_btn d-none d-sm-block">Order Now</a>
+
+                        <!-- DESKTOP BUTTONS: Visible on Desktop >= 992px (Hidden on Mobile) -->
+                        <div class="d-none d-lg-flex align-items-center ml-3">
+                            <a href="https://wa.me/919420002526?text=Hi%20jay%20bhawani%20team%20%2C%20I%20want%20to%20became%20a%20distribution%20patner%2C%20please%20let%20me%20know%20required%20formality." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn_distributor mr-2">
+                               Become Distributor
+                            </a>
+                            <a href="https://wa.me/919420002526?text=Hi%20Jaybhawani%20Team.%20Need%20to%20discuss%20about%20farsana" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="single_page_btn">
+                               Order Now
+                            </a>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Header part end-->
 
     <!-- Hero Breadcrumb -->
     <section class="breadcrumb breadcrumb_bg">
