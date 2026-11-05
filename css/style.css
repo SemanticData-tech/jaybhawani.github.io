@@ -8057,3 +8057,14 @@ header .menu_btn a.btn_1:hover,
     background-color: #e04000 !important;
     color: #ffffff !important;
 }
+/* ---- Tighter gap between header and hero carousel (desktop) ---- */
+@media (min-width: 992px) {
+    .hero_carousel_section { margin-top: 70px; }
+    #heroCarousel .carousel-item {
+        height: auto;
+        min-height: 0;
+        padding: 0 0 40px 0;
+    }
+    .jb-slide-row { min-height: 600px; }
+    .jb-focus-img { max-height: 560px; }
+}
