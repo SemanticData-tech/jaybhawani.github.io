@@ -1161,3 +1161,17 @@ section.regervation_part.section_padding {
   .jb-float-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .jb-fc-img { height: 120px; }
 }
+
+/* Brand-quote avatar: show the logo uncropped */
+.review_part .client_img img[src$="logo.png"] {
+  border-radius: 12px !important;
+  object-fit: contain;
+  background: #fff;
+  padding: 8px;
+  width: 140px;
+  height: auto;
+}
+
+/* Stop the page scrolling past the footer (stray overflowing elements) */
+html { overflow-x: hidden; }
+body { overflow-y: clip; overflow-x: hidden; }
